@@ -25,10 +25,8 @@ const ProfileScreen = () => {
     const { data: orders, isLoading, error } = useGetMyOrdersQuery();
 
     useEffect(() => {
-        if (userInfo) {
-            setName(userInfo.name);
-            setEmail(userInfo.email);
-        }
+        setName(userInfo.name);
+        setEmail(userInfo.email);
     }, [userInfo.name, userInfo.email]);
 
     const submitHandler = async (e) => {

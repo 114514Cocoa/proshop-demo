@@ -5,7 +5,6 @@ import { Form, Button, Col } from "react-bootstrap"
 import FormContainer from "../components/FormContainer"
 import CheckoutSteps from "../components/CheckoutSteps"
 import { savePaymentMethod } from "../slices/cartSlice"
-import ShippingScreen from "./ShippingScreen"
 
 const PaymentScreen = () => {
     const [paymentMethod, setPaymentMethod] = useState('Paypal')
