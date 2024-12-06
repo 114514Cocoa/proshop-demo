@@ -1,0 +1,40 @@
+{
+  "name": "proshop-v2",
+  "version": "2.0.0",
+  "description": "eCommerce application built with yhr MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "js-tokens": "^4.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "loose-envify": "^1.4.0",
+    "mongodb": "^6.8.1",
+    "mongoose": "^8.6.1",
+    "multer": "^1.4.5-lts.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^6.26.1",
+    "react-router-dom": "^6.26.1",
+    "scheduler": "^0.23.2"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Hoshii Miki",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4"
+  }
+}
